@@ -1,0 +1,20 @@
+<!--miniprogram/pages/essays/essay-detail/essay-detail.wxml-->
+<view class='container'>
+  <image class="head-image" src="{{essayData.img.illustration}}"></image>
+
+  <view class='author-date'>
+    <image class='avatar' src="{{essayData.img.avatar}}"></image>
+    <text class='author'>{{essayData.author}}</text>
+    <text class='const-text'>推送于</text>
+    <text class='date'>{{essayData.dateTime}}</text>
+  </view>
+  <text class='title'>{{essayData.title}}</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image catchtap='onCollectionTap' src="{{collected? '/images/icon/collection.png' : '/images/icon/collection-anti.png'}}"></image>
+      <image catchtap='onShareTap' class='share-img' src="/images/icon/share.png"></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class='detail'>{{essayData.detail}}</text>
+</view>

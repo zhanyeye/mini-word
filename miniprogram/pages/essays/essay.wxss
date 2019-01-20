@@ -1,0 +1,12 @@
+/* miniprogram/pages/essays/essay.wxss */
+@import "essay-item/essay-item-template.wxss";
+
+swiper {
+  height: 430rpx;
+  width: 100%;
+}
+
+swiper image {
+  height: 430rpx;
+  width: 100%;
+}

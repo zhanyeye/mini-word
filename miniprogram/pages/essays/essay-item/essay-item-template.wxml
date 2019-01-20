@@ -1,0 +1,17 @@
+<template name="essayItem">
+  <view class='essay-container'>
+    <view class='essay-author-date'>
+      <image wx:if='{{img_condition}}' class='essay-author' src='{{img.avatar}}'></image>
+      <text class='essay-date'>{{date}}</text>
+    </view>
+    <text class='essay-title'>{{title}}</text>
+    <image class='essay-image' src='{{img.illustration}}'></image>
+    <text class='essay-content'>{{content}}</text>
+    <view class='essay-like'>
+      <image class='essay-like-image' src='/images/icon/chat.png'></image>
+      <text class='essay-like-font'>{{collection}}</text>
+      <image class='essay-like-image' src='/images/icon/view.png'></image>
+      <text class='essay-like-font'>{{reading}}</text>
+    </view>
+  </view>
+</template>

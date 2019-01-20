@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#29C1E8",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "小程序",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false
+}

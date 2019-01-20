@@ -1,0 +1,168 @@
+<!--miniprogram/pages/me/me.wxml-->
+<!--pages/me/index.wxml-->
+<button class='userinfo' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+   <view class='user_pic'>
+       <image class='user_pic' background-size="cover" src='{{userInfo.avatarUrl}}'></image> 
+   </view>
+   <view class='user_detail' >
+     <view style='font-size: 16px; font-weight:700;text-align:left;height:30px;'>{{user_note}}</view>
+     <text style='font-size: 13px; color:seagreen;text-align:left;height:20px;'>等级 ：1</text>
+     <text style='font-size: 13px; color:seagreen;text-align:left;height:20px;'>连续签到 ：1</text>
+   </view>
+</button>
+
+<view style='font-size: 13px; margin-top: 12px;margin-left:10px;' >学习设置</view>
+
+<view class='study_set'>
+
+   <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>每日学习量</view>
+        <view class='day_num_note'>当日复习的词量 + 当日新学词量</view>
+     </view>
+     <view class='input_content'>
+    
+      <input class='right_block_content' type="number" bindinput="voteTitle" placeholder="{{day_task}}" ></input>
+     </view>
+   </view>
+
+   <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title' >记忆模式：看英文会议中文</view>
+     </view>
+     <view class='right_block' bindtap='toforgive'>
+      英中
+     </view>
+   </view>
+
+      <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>已加入学习计划的单词量</view>
+     </view>
+     <view class='right_block'>
+      <view style='margin:auto'>{{add_word_num}}</view>
+     </view>
+   </view>
+
+      <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>连续签到天数</view>
+     </view>
+     <view class='right_block'>
+      {{complete_day}}
+     </view>
+   </view>
+
+      <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>备份与还原</view>
+     </view>
+     <view class='right_block' bindtap='show_backup'>
+      (ง •_•)ง
+     </view>
+   </view>
+
+
+
+
+</view>
+
+
+<view style='font-size: 13px; margin-top: 12px;margin-left:10px;' >单词上限（购买功能未上线）</view>
+
+<view class='study_set'>
+
+   <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>我的单词总上限</view>
+     </view>
+     <view class='right_block'>
+      {{my_word_num}}
+     </view>
+   </view>
+
+      <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title'>已获得免费的单词限额</view>
+     </view>
+     <view class='right_block'>
+      {{my_word_num}}
+     </view>
+   </view>
+
+      <view  class='study_set_block'>
+     <view class='left_block'>
+        <view class='day_num_title' bindtap='toforgive'>购买上限（未开放）</view>
+     </view>
+     <view class='right_block' bindtap='toforgive'>
+      0
+     </view>
+   </view>
+
+    <view  class='study_set_block' bindtap='my_collect'>
+     <view class='left_block'>
+        <view class='day_num_title' >我收藏的单词</view>
+     </view>
+   </view>
+
+   <view  class='study_set_block' bindtap='my_word_list'>
+     <view class='left_block'>
+        <view class='day_num_title' >我加入计划的单词</view>
+     </view>
+   </view>
+
+</view>
+
+
+
+<view style='font-size: 13px; margin-top: 12px;margin-left:10px;' >其他</view>
+
+<view class='study_set'>
+
+   <view  class='study_set_block' bindtap='test_card'>
+     <view class='left_block'>
+        <view class='day_num_title' >词汇量测试</view>
+     </view>
+   </view>
+
+      <view  class='study_set_block' bindtap='suggestion'>
+     <view class='left_block'>
+        <view class='day_num_title' >意见反馈 & bug提交</view>
+     </view>
+   </view>
+
+    <view  class='study_set_block' bindtap='toforgive'>
+     <view class='left_block'>
+        <view class='day_num_title' >小单词使用指南</view>
+     </view>
+   </view>
+   
+       <view  class='study_set_block' bindtap='about_me'>
+     <view class='left_block'>
+        <view class='day_num_title' >关于单词小程序</view>
+     </view>
+   </view>
+
+</view>
+ <view style='margin: 2%; border-radius: 5px;'>
+ <image style="width: 100%; " mode="scaleToFill" src='../../images/bottom.gif'></image>
+ <ad unit-id="adunit-65b5af1a9a993636"></ad>
+ </view>
+
+<view class='sorry_note' wx:if="{{toforgive}}">
+  <view class='sorry_word'>抱歉，该功能开发者还没写！！！</view>
+  <view class='forgive' bindtap='forgive'>原谅</view>
+</view>
+
+<view class='back_note' wx:if="{{tobackup}}">
+  <view class='forgive' bindtap='toback'>还原</view>
+  <view class='forgive' bindtap='toup'>备份</view>
+  <view class='forgive' bindtap='show_backup'>取消</view>
+</view>
+
+<!-->
+      <image style="width: 100%; height:100%; " mode="scaleToFill" src="https://upload-images.jianshu.io/upload_images/4179819-4c247b1477685278.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700"></image>
+
+   -->
+
+

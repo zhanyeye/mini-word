@@ -1,0 +1,23 @@
+<!--miniprogram/pages/essays/essay.wxml-->
+<!--pages/essays/essay.wxml-->
+<import src="essay-item/essay-item-template.wxml" />
+<view>
+  <swiper vertical='{{false}}' indicator-dots='true' autoplay='true' interval='4000' circular='true'>
+    <swiper-item>
+      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/003.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/004.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/006.png'></image>
+    </swiper-item>
+  </swiper>
+
+  <block wx:for="{{essays_key}}" wx:for-item="item">
+    <view catchtap="onEssayTap" data-essayId="{{item.essayId }}">
+      <template is="essayItem" data="{{...item}}" />
+      <!-- {{...item}}是把对象中内容展开平铺 -->
+    </view>
+  </block>
+</view>
