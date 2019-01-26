@@ -1,0 +1,15 @@
+<view class="container">
+  <image class="logo" src="/images/search-logo.png"></image>
+  <text class="name">小单词 v1.0.0</text>
+  <text class="name">开发者信息</text>
+  <image class="user-avatar" src="/images/face.png"></image>
+  <text class="name"></text>
+  <text class="name"></text>
+  <text class="name">GitHub：</text>
+  <text class="name">个人主页：</text>
+  <image class="user-avatar" src="/images/face2.png"></image>
+  <text class="name"></text>
+  <text class="name">GitHub：@maruko0713</text>
+  <text class="name">个人主页：</text>
+  <text class="copy">本软件已开源：</text>
+</view>

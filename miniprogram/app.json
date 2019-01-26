@@ -4,9 +4,13 @@
     "pages/essays/essay",
     "pages/essays/essay-detail/essay-detail",
     "pages/study/study",
-    "pages/info/info",
     "pages/me/me",
-    "pages/study/word/word"
+    "pages/study/word/word",
+    "pages/dictation/menu",
+    "pages/dictation/listening/audio",
+    "pages/me/help/help",
+    "pages/me/clause/clause"
+
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -32,8 +36,8 @@
         "selectedIconPath": "images/tab/dianying_hl.png"
       },
       {
-        "pagePath": "pages/info/info",
-        "text": "统计",
+        "pagePath": "pages/dictation/menu",
+        "text": "听写",
         "iconPath": "images/tab/info.png",
         "selectedIconPath": "images/tab/info_hl.png"
       },

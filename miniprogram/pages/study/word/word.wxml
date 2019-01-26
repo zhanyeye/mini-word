@@ -6,13 +6,6 @@
   <view class="pron-container">
     <image class="pron-icon" src="/images/icon/pron-icon.png"></image>
     <text class="word-pron" bindtap="read">/{{pron}}/</text>
-    <image class="pron-icon" src="{{toneIcon}}"></image>
-  </view>
-
-  <view>
-    <!-- <text class='word-tone'>声调：</text>
-        <text class='word-tone'>{{tone}}</text> -->
-    <loading hidden="{{hidden}}">加载中...</loading>
   </view>
 
   <view>
