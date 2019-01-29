@@ -91,7 +91,7 @@ src: url('/assets/font/chalkboard.ttf'),
   width: 90%;
   margin-top: 10px;
   padding:10px;
-  background-color:  #CFD8DC;
+  background-color:  #7fecad;
   font-family: Songti TC;
   font-size: 32rpx;
   color: #455a64;
@@ -104,7 +104,7 @@ src: url('/assets/font/chalkboard.ttf'),
 
 .display_show{
   display: block;
-  border: 1px solid #CED3DC;
+  border: 1px solid #7fecad;
   border-bottom:0.8px solid #ffffff;
   padding: 10px;
 }
