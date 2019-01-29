@@ -23,7 +23,7 @@ Page({
     wordSum: 0
   },
 
-  onLoad: function (options) {
+  onLoad: function(options) {
     that = this;
     let db = wx.cloud.database();
     let bookid = (options.book == '1') ? "wordlist1" : "wordlist2" //选择单词书
@@ -40,7 +40,7 @@ Page({
         definition: arr[idx].definition,
         hidden: !that.data.hidden
       })
-      wx.setStorage({  //改单词
+      wx.setStorage({ //改单词
         key: that.data.content,
         data: 1,
       })
@@ -49,26 +49,27 @@ Page({
       console.log(wordPass + ':' + wordSum)
       that.read()
     })
-    
+
   },
 
 
-  onHide: function () {
+  onHide: function() {
     //关掉页面之后所有storage全部清除
     wx.clearStorage()
   },
 
-  onUnload: function () {
+  onUnload: function() {
     wx.clearStorage()
   },
 
-  show: function () { //显示释义
+  show: function() { //显示释义
+    this.read()
     this.setData({
       showNot: true
     })
   },
 
-  next: function () {
+  next: function() {
     const innerAudioContext = wx.createInnerAudioContext()
     innerAudioContext.autoplay = true
     innerAudioContext.src = 'cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/right.mp3'
@@ -84,7 +85,7 @@ Page({
     wordPass = wordPass + 1 //每次按下next都算是见过一次面了
     this.setData({
       showNot: false,
-      percent: wordPass * 100 / wordSum 
+      percent: wordPass * 100 / wordSum
     })
     console.log(wordPass + ':' + wordSum + ':' + that.data.list.length)
 
@@ -123,31 +124,31 @@ Page({
 
   },
 
-  read: function () {
+  read: function() {
     var word = that.data.content
     console.log(word)
-    var fdStart = that.data.content.indexOf("～");
-    if (fdStart == 0) {
-      //表示strCode是以~开头；
-      word = that.data.content.replace("～", "");
-    }
-    innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.src = 'http://fanyi.baidu.com/gettts?lan=en&text=' + encodeURIComponent(word) + '&spd=3&source=web'
-    innerAudioContext.autoplay = true
-    innerAudioContext.onPlay(() => {
-      // console.log('开始播放')
+    
+    wx.request({
+      url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
+      data: {},
+      method: 'GET',
+      success: function(res) {
+        innerAudioContext = wx.createInnerAudioContext()
+        innerAudioContext.src = res.data.data.audio
+        innerAudioContext.autoplay = true
+        innerAudioContext.onPlay(() => {
+          console.log('read()开始播放')
+        })
+        innerAudioContext.onError((res) => {
+          console.log("read()出错了")
+          wx.showToast({
+            title: '读音走丢了TAT',
+            mask: false,
+          })
+        })
+      },
+      fail: function() {},
+      complete: function() {}
     })
-    innerAudioContext.onError((res) => {
-       console.log(res.errMsg)
-       console.log(res.errCode)
-      wx.showToast({
-        title: '读音走丢了TAT',
-        mask: false,
-        success: function () { },
-        fail: function () { },
-        complete: function () { }
-      })
-    })
-
   }
 })

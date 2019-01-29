@@ -16,7 +16,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "小单词",
+    "navigationBarTitleText": "small 单词",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -26,26 +26,26 @@
       {
         "pagePath": "pages/essays/essay",
         "text": "阅读",
-        "iconPath": "images/tab/yuedu.png",
-        "selectedIconPath": "images/tab/yuedu_hl.png"
+        "iconPath": "images/tab/read_hl.png",
+        "selectedIconPath": "images/tab/read.png"
       },
       {
         "pagePath": "pages/study/study",
         "text": "单词",
-        "iconPath": "images/tab/word.png",
-        "selectedIconPath": "images/tab/word_hl.png"
+        "iconPath": "images/tab/word_hl.png",
+        "selectedIconPath": "images/tab/word.png"
       },
       {
         "pagePath": "pages/dictation/menu",
         "text": "听写",
-        "iconPath": "images/tab/info.png",
-        "selectedIconPath": "images/tab/info_hl.png"
+        "iconPath": "images/tab/listen_hl.png",
+        "selectedIconPath": "images/tab/listen.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我的",
-        "iconPath": "images/tab/me.png",
-        "selectedIconPath": "images/tab/me_hl.png"
+        "iconPath": "images/tab/me_hl.png",
+        "selectedIconPath": "images/tab/me.png"
       }
     ]
   }
