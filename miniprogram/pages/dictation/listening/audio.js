@@ -3,6 +3,7 @@ var that
 var wordPass
 var wordSum
 var flag
+var last_idx //记录上一次单词索引序号
 
 Page({
 
@@ -26,9 +27,11 @@ Page({
       wordList = res.data.section
       var worldListLen = wordSum = wordList.length
       wordPass = 0
-      console.log(res.data)
       var idx = Math.floor(Math.random() * (worldListLen - 1))
+      last_idx = idx
 
+
+      console.log(that.query(wordList[idx].content))
 
       //绑定数据到页面
       that.setData({
@@ -43,6 +46,25 @@ Page({
       that.read()
     })
 
+  },
+
+  query: function(word) {
+    wx.request({
+      url: 'https://api.shanbay.com/bdc/search/?word=' + word,
+      data: {},
+      method: 'GET',
+      success: function (res) { 
+        console.log(word)
+        return  {
+          pron: res.data.data.pron,
+          definition: res.data.data.definition,
+          audioUrl: res.data.data.audio
+        }
+        
+      },
+      fail: function () { },
+      complete: function () { }
+    })
   },
 
   showAnswer: function() {
@@ -83,15 +105,15 @@ Page({
     var that = this;
     if (flag != true) { //在触发下一个之前，不是在听一次
       wordPass++
-      var position = wordList.indexOf(that.data.definition)
-      wordList.splice(position, 1)
+      console.log(wordList[last_idx])
+      wordList.splice(last_idx, 1) //删除上一个单词
       console.log(wordList.length)
       console.log(wordPass)
     }
     flag = false;
 
     var idx = Math.floor(Math.random() * (wordList.length - 1)) //任选一个听写
-
+    last_idx = idx
     that.setData({
       //设置加载条
       content: wordList[idx].content,
@@ -113,6 +135,7 @@ Page({
       data: {},
       method: 'GET',
       success: function(res) {
+        console.log(res.data.data)
         var innerAudioContext = wx.createInnerAudioContext()
         innerAudioContext.src = res.data.data.audio
         innerAudioContext.autoplay = true
@@ -131,6 +154,5 @@ Page({
       complete: function() {}
     })
   }
-
 
 })

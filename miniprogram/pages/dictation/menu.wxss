@@ -1,4 +1,3 @@
-/* miniprogram/pages/study/study.wxss */
 @font-face {
 font-family: Chalkboard;
 src: url('/assets/font/chalkboard.ttf'),

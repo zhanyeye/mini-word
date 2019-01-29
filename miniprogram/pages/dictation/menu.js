@@ -1,10 +1,6 @@
-// miniprogram/pages/study/study.js
 var app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     open: false,
     open2: false,
@@ -12,26 +8,28 @@ Page({
     mode: 'aspectFit',
     userInfo: {}
   },
-  showitem: function (options) {
+
+  showitem: function(options) {
     this.setData({
       open: !this.data.open
     })
   },
-  showitem2: function (options) {
+
+  showitem2: function(options) {
     this.setData({
       open2: !this.data.open2
     })
   },
-  showWord: function (event) {
+  showWord: function(event) {
     wx.navigateTo({
       url: './listening/audio?book=' + event.currentTarget.dataset.book + '&&part=' + event.currentTarget.dataset.part,
-      success: function (res) {
+      success: function(res) {
         // success
       },
-      fail: function () {
+      fail: function() {
         // fail
       },
-      complete: function () {
+      complete: function() {
         // complete
       }
     })

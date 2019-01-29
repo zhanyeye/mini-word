@@ -1,29 +1,13 @@
-var app = getApp()
-var that;
-var list;
-var wordsListLen;
-var familiarLevel;
-var levelArr;
-var selectArr; //可供选择的单词的数组
-var innerAudioContext;
-var wordSum;
-var wordPass;
-var tempAudioPath = ''
-var arr
-
 Page({
+
   data: {
-    list: "",
-    wordsListLen: "",
     hidden: false,
     content: '',
     proficiency: 1,
     percent: 1,
-    wordPass: 0,
-    wordSum: 0
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     that = this;
     let db = wx.cloud.database();
     let bookid = (options.book == '1') ? "wordlist1" : "wordlist2" //选择单词书
@@ -49,106 +33,54 @@ Page({
       console.log(wordPass + ':' + wordSum)
       that.read()
     })
-
   },
 
-
-  onHide: function() {
-    //关掉页面之后所有storage全部清除
-    wx.clearStorage()
-  },
-
-  onUnload: function() {
-    wx.clearStorage()
-  },
-
-  show: function() { //显示释义
-    this.read()
-    this.setData({
-      showNot: true
-    })
-  },
-
-  next: function() {
-    const innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.autoplay = true
-    innerAudioContext.src = 'cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/right.mp3'
-    innerAudioContext.onPlay(() => {
-      console.log('ding的一声')
-    })
-    innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    })
-
-    that = this
-    wordPass = wordPass + 1 //每次按下next都算是见过一次面了
-    this.setData({
-      showNot: false,
-      percent: wordPass * 100 / wordSum
-    })
-    console.log(wordPass + ':' + wordSum + ':' + that.data.list.length)
-
-    //这里设置用户熟练度到本地
-    //TODO 其实没有考虑到熟练度为空的时候的情况
-    familiarLevel = wx.getStorageSync(that.data.content)
-    familiarLevel++
-    //如果熟练度到2了就删掉
-    if (familiarLevel == 2) {
-      //判断位置删除
-      var position = that.data.list.indexOf(that.data.content)
-      that.data.list.splice(position, 1)
-    } else {
-      wx.setStorage({
-        key: that.data.content,
-        data: familiarLevel,
-      })
-    }
-
-    if (that.data.list.length == 0) {
-      wx.showToast({
-        title: '恭喜您学完本课',
-        icon: 'success',
-        duration: 2000
-      })
-    } else {
-      var idx = Math.floor(Math.random() * (that.data.list.length - 1))
-      this.setData({
-        content: arr[idx].content,
-        pron: arr[idx].pron,
-        definition: arr[idx].definition,
-        proficiency: familiarLevel
-      })
-      that.read()
-    }
-
-  },
-
-  read: function() {
-    var word = that.data.content
-    console.log(word)
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
     
-    wx.request({
-      url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
-      data: {},
-      method: 'GET',
-      success: function(res) {
-        innerAudioContext = wx.createInnerAudioContext()
-        innerAudioContext.src = res.data.data.audio
-        innerAudioContext.autoplay = true
-        innerAudioContext.onPlay(() => {
-          console.log('read()开始播放')
-        })
-        innerAudioContext.onError((res) => {
-          console.log("read()出错了")
-          wx.showToast({
-            title: '读音走丢了TAT',
-            mask: false,
-          })
-        })
-      },
-      fail: function() {},
-      complete: function() {}
-    })
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    
   }
 })

@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/dictation/menu",
     "pages/welcome/welcome",
     "pages/essays/essay",
     "pages/essays/essay-detail/essay-detail",
     "pages/study/study",
     "pages/me/me",
     "pages/study/word/word",
-    "pages/dictation/menu",
+    
     "pages/dictation/listening/audio",
     "pages/me/help/help",
     "pages/me/clause/clause"

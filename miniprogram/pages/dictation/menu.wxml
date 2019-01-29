@@ -1,4 +1,3 @@
-<!--miniprogram/pages/study/study.wxml-->
 <view class="container">
   <view class='page_bd'>
     <view class="body_head" bindtap="showitem">《大学英语四级》听写
@@ -46,7 +45,7 @@
       <view class="{{open?'display_show':'display_none'}}">第十课</view>
     </view>
 
-    
+
   </view>
   <view class='page_bd'>
     <view class="body_head" bindtap="showitem2">《大学英语六级》听写
