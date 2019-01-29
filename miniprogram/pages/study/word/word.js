@@ -1,3 +1,4 @@
+var app = getApp()
 var that;
 var list;
 var wordsListLen;
@@ -90,9 +91,7 @@ Page({
     //这里设置用户熟练度到本地
     //TODO 其实没有考虑到熟练度为空的时候的情况
     familiarLevel = wx.getStorageSync(that.data.content)
-    console.log("familiarLevel1 : " + familiarLevel)
     familiarLevel++
-    console.log("familiarLevel2 : " + familiarLevel)
     //如果熟练度到2了就删掉
     if (familiarLevel == 2) {
       //判断位置删除
@@ -126,6 +125,7 @@ Page({
 
   read: function () {
     var word = that.data.content
+    console.log(word)
     var fdStart = that.data.content.indexOf("～");
     if (fdStart == 0) {
       //表示strCode是以~开头；

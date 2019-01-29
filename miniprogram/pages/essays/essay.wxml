@@ -14,7 +14,7 @@
     </swiper-item>
   </swiper>
 
-  <block wx:for="{{essays_key}}" wx:for-item="item">
+  <block wx:for="{{essays_key}}" wx:key="unique" wx:for-item="item">
     <view catchtap="onEssayTap" data-essayId="{{item.essayId }}">
       <template is="essayItem" data="{{...item}}" />
       <!-- {{...item}}是把对象中内容展开平铺 -->

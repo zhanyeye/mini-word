@@ -12,12 +12,10 @@ Page({
 
   onShareTap: function(event) {
     console.log("hhhh");
-    wx.showActionSheet({
-      itemList: [
-        "分享到朋友圈"
-      ],
-      itemColor: "#405gf80",
-
+    wx.showToast({
+      title: "点赞成功",
+      duration: 500,
+      icon: "success"
     })
   },
 

@@ -32,8 +32,8 @@
       {
         "pagePath": "pages/study/study",
         "text": "单词",
-        "iconPath": "images/tab/dianying.png",
-        "selectedIconPath": "images/tab/dianying_hl.png"
+        "iconPath": "images/tab/word.png",
+        "selectedIconPath": "images/tab/word_hl.png"
       },
       {
         "pagePath": "pages/dictation/menu",

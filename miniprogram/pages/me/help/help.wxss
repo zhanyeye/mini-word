@@ -8,15 +8,29 @@
 }
 
 .logo {
-  width: 224rpx;
-  height: 224rpx;
-  margin-top: 118rpx;
+  width: 155rpx;
+  height: 64rpx;
+  margin-top: 100rpx;
+}
+
+.author {
+  margin-top: 80rpx;
+  font-family: Songti SC;
+  font-size: 32rpx;
+  color: #585858;
 }
 
 .name {
   margin-top: 28rpx;
   font-family: Songti SC;
   font-size: 32rpx;
+  color: #585858;
+}
+
+.url {
+  /* margin-top: 28rpx; */
+  font-family: Songti SC;
+  font-size: 28rpx;
   color: #585858;
 }
 
@@ -31,14 +45,14 @@
 }
 
 .user-avatar {
-  margin-top: 40rpx;
+  margin-top: 20rpx;
   width: 168rpx;
   height: 168rpx;
   border-radius: 50%;
 }
 
 .copy {
-  margin-top: 80rpx;
+  margin-top: 40rpx;
   font-family: Songti SC;
   font-size: 24rpx;
   color: #585858;
