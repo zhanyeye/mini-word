@@ -16,17 +16,16 @@
 ## 展示
 
 
+<img width="200" height="auto" src="./exhibition_image/01.jpg"/>
 
-![01](./exhibition_image/01.jpg)
+<img width="200" height="auto" src="./exhibition_image/02.jpg"/>
 
-![02](./exhibition_image/02.jpg)
+<img width="200" height="auto" src="./exhibition_image/03.jpg"/>
 
-![03](./exhibition_image/03.jpg)
+<img width="200" height="auto" src="./exhibition_image/04.jpg"/>
 
-![04](./exhibition_image/04.jpg)
+<img width="200" height="auto" src="./exhibition_image/05.jpg"/>
 
-![04](./exhibition_image/05.jpg)
+<img width="200" height="auto" src="./exhibition_image/06.jpg"/>
 
-![04](./exhibition_image/06.jpg)
-
-![04](./exhibition_image/07.jpg)
+<img width="200" height="auto" src="./exhibition_image/07.jpg"/>
