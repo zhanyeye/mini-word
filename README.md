@@ -1,10 +1,11 @@
 # small 单词
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+- 背单词和听写部分 设计思路、页面样式 来自了restress的 BallBall-Words 这个项目 https://github.com/restress/BallBall-Words
+- 参考的部分js逻辑重写，js逻辑更合理、可读性更好、也更简洁,使用了扇贝api
+- 使用微信小程序云开发
+## 功能
+- 阅读
+- 背单词
+- 听写
 
-## 参考文档
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
