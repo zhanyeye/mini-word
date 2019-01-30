@@ -24,7 +24,7 @@ Page({
       section: true
     }).get().then(res => {
       wordList = res.data.section
-      var wordSum = wordList.length
+      wordSum = wordList.length
       wordPass = 0
       var idx = Math.floor(Math.random() * (wordList.length - 1))
       last_idx = idx

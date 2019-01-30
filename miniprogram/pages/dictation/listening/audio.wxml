@@ -1,5 +1,5 @@
 <view class='container'>
-  <progress class='word-progress' percent='{{percent}}' activeColor='#455A64'></progress>
+  <progress class='word-progress' percent='{{percent}}' activeColor='#2edfa3'></progress>
 
   <loading hidden="{{hidden}}">加载中...</loading>
   <text wx:if="{{showNot}}" class="sound-title">{{content}}</text>

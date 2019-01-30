@@ -1,6 +1,6 @@
 <!--miniprogram/pages/study/word/word.wxml-->
 <view class="container" catchtap='read'>
-  <progress class='word-progress' percent='{{percent}}' activeColor='#455A64'></progress>
+  <progress class='word-progress' percent='{{percent}}' activeColor='#4b5cc4'></progress>
 
   <text class="word-content">{{content}}</text>
   <view class="pron-container">

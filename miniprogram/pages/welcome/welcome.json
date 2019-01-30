@@ -1,1 +1,8 @@
-{}
+{
+  "navigationBarBackgroundColor": "#c0ebd7",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "small 单词",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false
+}

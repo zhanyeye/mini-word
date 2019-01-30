@@ -1,15 +1,7 @@
-var app = getApp()
 var that;
-var list;
-var familiarLevel;
-var levelArr;
-var selectArr; //可供选择的单词的数组
 var innerAudioContext;
 var wordSum;
 var wordPass;
-var tempAudioPath = ''
-
-
 var wordList
 var gradeList
 var last_idx
@@ -20,7 +12,7 @@ Page({
     hidden: false,
     content: '',
     proficiency: 1,
-    percent: 1,
+    percent: 0,
   },
 
   onLoad: function(options) {
@@ -92,7 +84,7 @@ Page({
 
     if (flag == false) {
       gradeList[last_idx]++ //只有当上一个单词认识时，熟练度才加1
-      if (gradeList[last_idx] == 3 && wordList.length != 1) {  //当上一个单词熟练度达到3时，可以删除
+        if (gradeList[last_idx] == 3 && wordList.length != 1) { //当上一个单词熟练度达到3时，可以删除
           wordPass++
           console.log("delete: " + wordList[last_idx].content)
           wordList.splice(last_idx, 1)
@@ -134,7 +126,6 @@ Page({
   read: function() {
     var word = that.data.content
     console.log(word)
-
     wx.request({
       url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
       data: {},
