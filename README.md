@@ -13,7 +13,7 @@
 - restress 的[BallBall-Words](https://github.com/restress/BallBall-Words) 这个项目在我被失败感笼罩时给了我很大的帮助，策划真的很棒，特别是听写这个功能!!!
 - 后来觉得 BallBall-Words 的js 代码太复杂（可能是我没看懂作者的思路），干脆自己重新写，感觉自己的更好  哈哈哈 (^~^)
 
-## 展示
+## 效果
 
 
 <img width="200" height="auto" src="./exhibition_image/01.jpg"/>
