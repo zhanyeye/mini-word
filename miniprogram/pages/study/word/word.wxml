@@ -1,32 +1,25 @@
-<!--miniprogram/pages/study/word/word.wxml-->
+<!-- miniprogram/pages/study/word/word.wxml -->
 <view class="container" catchtap='read'>
   <progress class='word-progress' percent='{{percent}}' activeColor='#4b5cc4'></progress>
-
   <text class="word-content">{{content}}</text>
   <view class="pron-container">
     <image class="pron-icon" src="/images/icon/pron-icon.png"></image>
     <text class="word-pron" bindtap="read">/{{pron}}/</text>
   </view>
-
   <view>
     <text class='word-tone'>熟练度：</text>
     <text class='word-tone'>{{proficiency}}</text>
     <loading hidden="{{hidden}}">加载中...</loading>
   </view>
-
   <view>
-    <text wx:if="{{showNot}}" class="word-definition">{{definition}}</text>
+    <text wx:if="{{display}}" class="word-definition">{{definition}}</text>
   </view>
-
-
   <view class='button-view'>
-    <view class="button-miss" catchtap="show">
-      <text class="word-miss" catchtap="show">不认识</text>
+    <view class="button-style" catchtap="show">
+      <text class="word-style" catchtap="show">不认识</text>
     </view>
-    <view class="button-miss" catchtap="next">
+    <view class="button-style" catchtap="next">
       <text class="word-next" catchtap="next">下一个</text>
     </view>
-
   </view>
-
 </view>

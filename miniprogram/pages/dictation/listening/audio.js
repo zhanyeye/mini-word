@@ -1,6 +1,6 @@
 var wordList = ""
 var that
-var wordPass
+var passed
 var wordSum
 var flag
 var last_idx
@@ -25,7 +25,7 @@ Page({
     }).get().then(res => {
       wordList = res.data.section
       wordSum = wordList.length
-      wordPass = 0
+      passed = 0
       var idx = Math.floor(Math.random() * (wordList.length - 1))
       last_idx = idx
 
@@ -36,7 +36,7 @@ Page({
         definition: wordList[idx].definition,
         audioUrl: null,
         hidden: !that.data.hidden,
-        showNot: false
+        display: false
       })
       that.read()
     })
@@ -45,7 +45,7 @@ Page({
 
   showAnswer: function() {
     this.setData({
-      showNot: true
+      display: true
     })
   },
 
@@ -80,11 +80,11 @@ Page({
     }
     var that = this;
     if (flag != true) { //在触发下一个之前，不是在听一次
-      wordPass++
+      passed++
       console.log("delete: " + wordList[last_idx].content)
       wordList.splice(last_idx, 1)
       console.log(wordList.length)
-      console.log(wordPass)
+      console.log(passed)
     }
     flag = false;
 
@@ -97,8 +97,8 @@ Page({
       definition: wordList[idx].definition,
       audioUrl: null,
       // hidden: !that.data.hidden,
-      showNot: false,
-      percent: wordPass * 100 / wordSum
+      display: false,
+      percent: passed * 100 / wordSum
     })
     this.read()
   },

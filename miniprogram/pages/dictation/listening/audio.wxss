@@ -1,6 +1,5 @@
 /* pages/audio/audio.wxss */
 
-
 .container {
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@
   align-content: center;
 }
 
-.button-miss {
+.button-style {
   display: flex;
   flex-direction: column;
   width: 360rpx;
@@ -44,7 +43,7 @@
   font-family: Songti TC;
   color: #455A64;
 }
-.word-miss {
+.word-style {
   margin: auto;
   font-family: Songti TC;
   font-size: 25rpx;

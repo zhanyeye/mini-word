@@ -65,7 +65,7 @@ src: url('/assets/font/chalkboard.ttf'),
   color: #585858;
 }
 
-.button-miss {
+.button-style {
   display: flex;
   flex-direction: column;
   width: 360rpx;
@@ -80,7 +80,7 @@ src: url('/assets/font/chalkboard.ttf'),
   margin-right: 10%;
 }
 
-.word-miss {
+.word-style {
   margin: auto;
   font-family: Songti TC;
   font-size: 25rpx;

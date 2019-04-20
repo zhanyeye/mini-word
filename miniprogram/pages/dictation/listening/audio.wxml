@@ -1,20 +1,18 @@
 <view class='container'>
   <progress class='word-progress' percent='{{percent}}' activeColor='#2edfa3'></progress>
-
   <loading hidden="{{hidden}}">加载中...</loading>
-  <text wx:if="{{showNot}}" class="sound-title">{{content}}</text>
-  <text wx:if="{{showNot}}" class="sound-title">{{pron}}</text>
-  <text wx:if="{{showNot}}" class="sound-title">{{definition}}</text>
-
+  <text wx:if="{{display}}" class="sound-title">{{content}}</text>
+  <text wx:if="{{display}}" class="sound-title">{{pron}}</text>
+  <text wx:if="{{display}}" class="sound-title">{{definition}}</text>
   <view class='control-div'>
-    <view class='button-miss' catchtap='stillSound'>
-      <text class='word-miss' catchtap='stillSound'>再听一次</text>
+    <view class='button-style' catchtap='stillSound'>
+      <text class='word-style' catchtap='stillSound'>再听一次</text>
     </view>
-    <view class='button-miss' catchtap='nextSound'>
-      <text class='word-miss' catchtap='nextSound'>下一个</text>
+    <view class='button-style' catchtap='nextSound'>
+      <text class='word-style' catchtap='nextSound'>下一个</text>
     </view>
-    <view class='button-miss' catchtap='showAnswer'>
-      <text class='word-miss' catchtap='showAnswer'>看答案</text>
+    <view class='button-style' catchtap='showAnswer'>
+      <text class='word-style' catchtap='showAnswer'>看答案</text>
     </view>
   </view>
 </view>

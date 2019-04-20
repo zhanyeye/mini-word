@@ -1,7 +1,7 @@
 var that;
 var innerAudioContext;
 var wordSum;
-var wordPass;
+var passed;
 var wordList
 var gradeList
 var last_idx
@@ -25,7 +25,7 @@ Page({
 
       wordList = res.data.section
       wordSum = wordList.length
-      wordPass = 0
+      passed = 0
       gradeList = new Array(wordList.length).fill(1);
       console.log(gradeList)
 
@@ -61,7 +61,7 @@ Page({
     }
     this.read()
     this.setData({
-      showNot: true,
+      display: true,
       proficiency: gradeList[last_idx]
     })
     console.log(gradeList)
@@ -85,12 +85,12 @@ Page({
     if (flag == false) {
       gradeList[last_idx]++ //只有当上一个单词认识时，熟练度才加1
         if (gradeList[last_idx] == 3 && wordList.length != 1) { //当上一个单词熟练度达到3时，可以删除
-          wordPass++
+          passed++
           console.log("delete: " + wordList[last_idx].content)
           wordList.splice(last_idx, 1)
           gradeList.splice(last_idx, 1)
           console.log(wordList.length)
-          console.log(wordPass)
+          console.log(passed)
         }
     }
     flag = false
@@ -98,12 +98,12 @@ Page({
     var idx = Math.floor(Math.random() * (wordList.length - 1))
     last_idx = idx
     this.setData({
-      showNot: false,
+      display: false,
       content: wordList[idx].content,
       pron: wordList[idx].pron,
       definition: wordList[idx].definition,
       proficiency: gradeList[idx],
-      percent: wordPass * 100 / wordSum
+      percent: passed * 100 / wordSum
     })
     that.read()
 

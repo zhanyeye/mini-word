@@ -1,7 +1,6 @@
-<!--miniprogram/pages/essays/essay-detail/essay-detail.wxml-->
+<!-- miniprogram/pages/essays/essay-detail/essay-detail.wxml -->
 <view class='container'>
   <image class="head-image" src="{{essayData.img.illustration}}"></image>
-
   <view class='author-date'>
     <image class='avatar' src="{{essayData.img.avatar}}"></image>
     <text class='author'>{{essayData.author}}</text>
