@@ -4,13 +4,13 @@
 <view>
   <swiper vertical='{{false}}' indicator-dots='true' autoplay='true' interval='4000' circular='true'>
     <swiper-item>
-      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/003.jpg'></image>
+      <image src='/images/swiper/003.jpg'></image>
     </swiper-item>
     <swiper-item>
-      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/004.jpg'></image>
+      <image src='/images/swiper/004.jpg'></image>
     </swiper-item>
     <swiper-item>
-      <image src='cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/006.png'></image>
+      <image src='/images/swiper/006.png'></image>
     </swiper-item>
   </swiper>
 

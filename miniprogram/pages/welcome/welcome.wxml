@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='user-avatar' src="cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/image/002.jpg"></image>
+  <image class='user-avatar' src="/images/icon/002.jpg"></image>
   <text class='user-name'><text style="color:gray">hello</text></text>
   <view class='moto-container' bindtap="onTap">
     <text class='moto'>开启小单词之旅</text>
