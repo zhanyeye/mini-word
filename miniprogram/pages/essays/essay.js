@@ -1,5 +1,4 @@
 // miniprogram/pages/essays/essay.js
-//var essaysData = require('../../data/essays-data.js')
 
 Page({
   data: {

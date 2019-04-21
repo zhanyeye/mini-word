@@ -16,9 +16,9 @@
 ## 效果
 
 
-<img width="200" height="auto" src="./exhibition_image/01.jpg"/>
+<img width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421093501.png"/>
 
-<img width="200" height="auto" src="./exhibition_image/02.jpg"/>
+<img width="200" height="auto" src="![]https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421093540.png"/>
 
 <img width="200" height="auto" src="./exhibition_image/03.jpg"/>
 

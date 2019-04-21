@@ -37,21 +37,6 @@ Page({
   },
 
   onLoad: function(options) {
-    var essayId = options.id
-    this.data.currentEssayId = essayId
-    var essays_Collected = wx.getStorageSync('essays_Collected') //所有文章的缓存状态
-    if (essays_Collected) {
-      var essaycollected = essays_Collected[essayId]
-      if (essaycollected) {
-        this.setData({
-          collected: essaycollected
-        })
-      }
-    } else {
-      var essays_Collected = {}
-      essays_Collected[essayId] = false
-      wx.setStorageSync('essays_collected', essays_Collected)
-    }
 
     const db = wx.cloud.database() //数据库读取数据
     db.collection('essay-data').get({
@@ -69,5 +54,23 @@ Page({
         })
       }
     })
+
+    var essayId = options.id
+    this.data.currentEssayId = essayId
+    var essays_Collected = wx.getStorageSync('essays_Collected') //所有文章的缓存状态
+    if (essays_Collected) {
+      var essaycollected = essays_Collected[essayId]
+      if (essaycollected) {
+        this.setData({
+          collected: essaycollected
+        })
+      }
+    } else {
+      var essays_Collected = {}
+      essays_Collected[essayId] = false
+      wx.setStorageSync('essays_collected', essays_Collected)
+    }
+
+    
   }
 })
