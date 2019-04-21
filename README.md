@@ -15,17 +15,18 @@
 
 ## 效果
 
-
 <img width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421093501.png"/>
 
-<img width="200" height="auto" src="![]https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421093540.png"/>
+<img width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421093540.png"/>
 
-<img width="200" height="auto" src="./exhibition_image/03.jpg"/>
 
-<img width="200" height="auto" src="./exhibition_image/04.jpg"/>
 
-<img width="200" height="auto" src="./exhibition_image/05.jpg"/>
+<img width="200" height="auto" src="https://ws1.sinaimg.cn/large/007y3hakly1g2a0gn52wdj30tz1nz4hy.jpg"/>
 
-<img width="200" height="auto" src="./exhibition_image/06.jpg"/>
+<img width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421094631.png"/>
+
+<img width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190421094703.png"/>
+
+<img width="200" height="auto" src="https://ws1.sinaimg.cn/large/007y3hakly1g2a0txvohyj30tz1nxtcs.jpg"/>
 
 <img width="200" height="auto" src="./exhibition_image/07.jpg"/>
