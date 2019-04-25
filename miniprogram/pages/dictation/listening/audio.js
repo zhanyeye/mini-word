@@ -12,7 +12,6 @@ Page({
     content: null, //词汇
     pron: null, //音标
     definition: null, //定义
-    audioUrl: null, //发音url
     hidden: false
   },
 
@@ -34,7 +33,6 @@ Page({
         content: wordList[idx].content,
         pron: wordList[idx].pron,
         definition: wordList[idx].definition,
-        audioUrl: null,
         hidden: !that.data.hidden,
         display: false
       })
@@ -81,10 +79,10 @@ Page({
     var that = this;
     if (flag != true) { //在触发下一个之前，不是在听一次
       passed++
-      console.log("delete: " + wordList[last_idx].content)
+      //console.log("delete: " + wordList[last_idx].content)
       wordList.splice(last_idx, 1)
-      console.log(wordList.length)
-      console.log(passed)
+      //console.log(wordList.length)
+      //console.log(passed)
     }
     flag = false;
 
@@ -95,7 +93,6 @@ Page({
       content: wordList[idx].content,
       pron: wordList[idx].pron,
       definition: wordList[idx].definition,
-      audioUrl: null,
       // hidden: !that.data.hidden,
       display: false,
       percent: passed * 100 / wordSum
@@ -105,7 +102,7 @@ Page({
 
   read: function() {
     var word = that.data.content
-    console.log("准备播放" + word)
+    //console.log("准备播放" + word)
     wx.request({
       url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
       data: {},
@@ -115,7 +112,7 @@ Page({
         innerAudioContext.src = res.data.data.audio
         innerAudioContext.autoplay = true
         innerAudioContext.onPlay(() => {
-          console.log('read()开始播放')
+          //console.log('read()开始播放')
         })
         innerAudioContext.onError((res) => {
           console.log("read()出错了")

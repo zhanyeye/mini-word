@@ -11,7 +11,6 @@ Page({
   },
 
   onShareTap: function(event) {
-    console.log("hhhh");
     wx.showToast({
       title: "点赞成功",
       duration: 500,

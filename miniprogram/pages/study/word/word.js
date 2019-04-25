@@ -27,7 +27,7 @@ Page({
       wordSum = wordList.length
       passed = 0
       gradeList = new Array(wordList.length).fill(1);
-      console.log(gradeList)
+      //console.log(gradeList)
 
       var idx = Math.floor(Math.random() * (wordList.length - 1))
       last_idx = idx
@@ -53,7 +53,7 @@ Page({
   },
 
   show: function() { //显示释义
-    console.log(gradeList)
+    //console.log(gradeList)
     this.promptTone() //提示音
     flag = true
     if (gradeList[last_idx] > 0) { //降低熟练度
@@ -64,7 +64,7 @@ Page({
       display: true,
       proficiency: gradeList[last_idx]
     })
-    console.log(gradeList)
+    //console.log(gradeList)
   },
 
   next: function() {
@@ -86,11 +86,11 @@ Page({
       gradeList[last_idx]++ //只有当上一个单词认识时，熟练度才加1
         if (gradeList[last_idx] == 3 && wordList.length != 1) { //当上一个单词熟练度达到3时，可以删除
           passed++
-          console.log("delete: " + wordList[last_idx].content)
+          //console.log("delete: " + wordList[last_idx].content)
           wordList.splice(last_idx, 1)
           gradeList.splice(last_idx, 1)
-          console.log(wordList.length)
-          console.log(passed)
+          //console.log(wordList.length)
+          //console.log(passed)
         }
     }
     flag = false
@@ -112,12 +112,12 @@ Page({
   promptTone: function() {
     innerAudioContext = wx.createInnerAudioContext()
     innerAudioContext.autoplay = true
-    innerAudioContext.src = 'cloud://zhanyeye-3b8d33.7a68-zhanyeye-3b8d33/right.mp3'
+    innerAudioContext.src = '/audio/right.mp3'
     innerAudioContext.onPlay(() => {
-      console.log('ding的一声')
+      //console.log('ding的一声')
     })
     innerAudioContext.onError((res) => {
-      console.log('ding的一声失败')
+      //console.log('ding的一声失败')
     })
   },
 
@@ -125,7 +125,7 @@ Page({
 
   read: function() {
     var word = that.data.content
-    console.log(word)
+    //console.log(word)
     wx.request({
       url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
       data: {},
@@ -135,7 +135,7 @@ Page({
         innerAudioContext.src = res.data.data.audio
         innerAudioContext.autoplay = true
         innerAudioContext.onPlay(() => {
-          console.log('read()开始播放')
+          //console.log('read()开始播放')
         })
         innerAudioContext.onError((res) => {
           console.log("read()出错了")
