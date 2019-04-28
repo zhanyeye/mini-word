@@ -1,6 +1,6 @@
 <view class="container">
   <image class="logo" src="/images/icon/logo.png"></image>
-  <text class="name">small 单词 v1.0.3</text>
+  <text class="name">small 单词 v1.0.4</text>
   <text class="copy"></text>
   <text class="name">鸣谢：restress</text>
   <text class="url">https://github.com/restress</text>

@@ -53,10 +53,9 @@ Page({
         })
       }
     })
-
     var essayId = options.id
     this.data.currentEssayId = essayId
-    var essays_Collected = wx.getStorageSync('essays_Collected') //所有文章的缓存状态
+    var essays_Collected = wx.getStorageSync('essays_collected') //所有文章的缓存状态
     if (essays_Collected) {
       var essaycollected = essays_Collected[essayId]
       if (essaycollected) {
