@@ -1,11 +1,6 @@
 
-
-
-
-
-
 #   small 单词
-
+- 项目的起因是一个校级大创，目的是学习，提高实践能力
 - 背单词和听写部分 设计思路、页面样式 来自了 restress 的[BallBall-Words](https://github.com/restress/BallBall-Words) 这个项目 
 - 参考的部分js逻辑重写，js逻辑更合理、可读性更好、使用了扇贝api
 - 改进了单词熟悉读的判断
