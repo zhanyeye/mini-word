@@ -15,7 +15,7 @@
 - 阅读，背单词，听写
 
 #### 小记
-- restress 的[BallBall-Words](https://github.com/restress/BallBall-Words) 这个项目在我被失败感笼罩时给了我很大的帮助，策划真的很棒，特别是听写这个功能!!!
+- restress 的[BallBall-Words](https://github.com/restress/BallBall-Words) 这个项目给了我很大的帮助，策划真的很棒，特别是听写这个功能!!!
 - 后来没看懂 BallBall-Words 的js 代码的思路，自己重新写,  哈哈哈 (^~^)
 
 ####   效果
