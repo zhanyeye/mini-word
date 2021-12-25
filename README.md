@@ -21,8 +21,7 @@
 
 ####   效果
 
-|                                                          |                                                          |                                                          |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/1.jpg"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/2.png"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/3.png"> |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/4.png"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/5.png"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/6.png"> |
 | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/7.png"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/8.png"> | <img src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/9.png"> |
