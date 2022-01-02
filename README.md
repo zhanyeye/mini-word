@@ -1,9 +1,10 @@
 
 
 <p align="center">
-  <img width="200" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/20210601204358.jpg" alt="logo">
+  <img width="100" src="https://user-images.githubusercontent.com/35565811/147875180-1ac4bbab-8acc-49d5-a370-eae31b9e3315.png" alt="logo">
+  <h2 align="center">small 单词</h2>
 </p>
-<h2 align="center">small 单词</h2>
+
 
 #### 背景
 - 项目的起因是一个本科校级大创，目的是学习，提高实践能力
